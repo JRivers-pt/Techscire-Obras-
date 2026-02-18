@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-pt" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techscire | Engenharia e Remodelações</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { zinc: { 850: '#1f1f22', 950: '#09090b' } },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #27272a 1px, transparent 1px), linear-gradient(to bottom, #27272a 1px, transparent 1px)",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-zinc-950 text-zinc-400 font-sans antialiased selection:bg-indigo-500/20">
+
+    <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-zinc-950/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="https://www.techscire.com" class="text-white flex items-center gap-2 group">
+                <span class="font-bold text-xl tracking-tighter">TECH<span
+                        class="text-zinc-500 font-light">SCIRE</span></span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="https://www.techscire.com"
+                    class="text-xs text-zinc-500 hover:text-white transition-colors">Site Oficial</a>
+                <a href="#contact"
+                    class="px-4 py-2 rounded-full bg-white text-zinc-950 text-xs font-medium hover:bg-zinc-200 transition-all">Pedir
+                    Orçamento</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 pt-32 pb-20">
+        <section id="contact" class="max-w-3xl mx-auto px-6 mt-32">
+            <div class="rounded-2xl bg-zinc-900/50 border border-white/10 p-8 md:p-12 text-center">
+                <h2 class="text-3xl text-white mb-6">Orçamentos Gratuitos</h2>
+                <form action="mailto:info@techscire.com" method="post" enctype="text/plain" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" name="Nome" placeholder="Nome completo" required
+                            class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-indigo-500 outline-none">
+                        <input type="email" name="Email" placeholder="seu@email.com" required
+                            class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-indigo-500 outline-none">
+                    </div>
+                    <textarea name="Mensagem" rows="4" placeholder="Detalhes do projeto..."
+                        class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-indigo-500 outline-none resize-none"></textarea>
+                    <button type="submit"
+                        class="w-full bg-white text-zinc-950 font-bold py-4 rounded-lg hover:bg-zinc-200 transition-all">
+                        Enviar Pedido de Visita
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-12 text-center text-xs text-zinc-600">
+        <p>© 2026 Techscire Solutions. Engineering & Construction.</p>
+    </footer>
+
+</body>
+
+</html>
