@@ -231,13 +231,36 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <script>
-                    const validProjects = [1, 2, 3, 4, 5, 6, 7, 9, 12, 15, 17, 18];
-                    validProjects.forEach(i => {
+                    const portfolioImages = [
+                        "WhatsApp Image 2026-08-14 at 16.54.50 (1).jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.54.50.jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.54.52.jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.54.55.jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.55.01.jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.55.02 (2).jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.55.03 (1).jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.55.03.jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.56.50 (3).jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.56.50.jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.56.51 (1).jpeg",
+                        "WhatsApp Image 2026-08-14 at 16.56.51.jpeg",
+                        "portfolio-1.jpeg",
+                        "portfolio-15.jpeg",
+                        "portfolio-17.jpeg",
+                        "portfolio-2.jpeg",
+                        "portfolio-3.jpeg",
+                        "portfolio-5.jpeg",
+                        "portfolio-6.jpeg",
+                        "portfolio-9.jpeg"
+                    ];
+                    
+                    portfolioImages.forEach((filename, index) => {
+                        const projectNum = index + 1;
                         document.write(`
                             <div class="group relative aspect-square overflow-hidden rounded-xl bg-slate-200 shadow-md">
-                                <img src="./images/portfolio/portfolio-${i}.jpeg" alt="Obra Realizada ${i}" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.src='https://via.placeholder.com/400?text=Obra+${i}'">
+                                <img src="./images/portfolio/${filename}" alt="Obra Realizada ${projectNum}" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" loading="lazy">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span class="text-white font-medium">Projeto ${i}</span>
+                                    <span class="text-white font-medium">Projeto ${projectNum}</span>
                                 </div>
                             </div>
                         `);
