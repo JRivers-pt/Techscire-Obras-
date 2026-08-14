@@ -4,21 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techscire | Remodelações e Instalações</title>
+    <title>Casas no Arco-íris | Remodelações e Instalações</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: { zinc: { 850: '#1f1f22', 950: '#09090b' } },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: { 
+                        slate: { 50: '#f8fafc', 800: '#1e293b', 900: '#0f172a' },
+                        brand: { 500: '#8b5cf6', 600: '#7c3aed' }
+                    },
                     backgroundImage: {
-                        'grid-pattern': "linear-gradient(to right, #27272a 1px, transparent 1px), linear-gradient(to bottom, #27272a 1px, transparent 1px)",
+                        'grid-pattern': "linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)",
                     }
                 }
             }
@@ -30,55 +33,70 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #09090b;
+            background: #f8fafc;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #27272a;
+            background: #cbd5e1;
             border-radius: 4px;
         }
 
         body {
             overflow-x: hidden;
         }
+        
+        .rainbow-text {
+            background: linear-gradient(90deg, #ef4444, #f59e0b, #10b981, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .rainbow-border {
+            position: relative;
+        }
+        .rainbow-border::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(90deg, #ef4444, #f59e0b, #10b981, #3b82f6, #8b5cf6);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
     </style>
 </head>
 
-<body class="bg-zinc-950 text-zinc-400 font-sans antialiased">
+<body class="bg-slate-50 text-slate-600 font-sans antialiased">
 
-    <div class="fixed inset-0 z-0 opacity-[0.03] pointer-events-none bg-grid-pattern bg-[size:4rem_4rem]"></div>
+    <div class="fixed inset-0 z-0 opacity-100 pointer-events-none bg-grid-pattern bg-[size:4rem_4rem]"></div>
 
-    <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-zinc-950/80 backdrop-blur-md">
+    <header class="fixed top-0 left-0 right-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="https://www.techscire.com" class="text-white flex items-center gap-2 group">
-                <svg class="h-8 w-auto text-white" viewBox="0 0 250 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <text x="0" y="42" font-family="Inter, sans-serif" font-weight="600" font-size="34"
-                        fill="currentColor">TECH</text>
-                    <path d="M2 50 L102 50 L102 10 L230 10" stroke="currentColor" stroke-width="2.5"></path>
-                    <text x="112" y="42" font-family="Inter, sans-serif" font-weight="600" font-size="34"
-                        fill="currentColor">OBRAS</text>
-                </svg>
+            <a href="#" class="flex items-center gap-2 group">
+                <span class="text-2xl font-bold tracking-tight text-slate-800">
+                    Casas no <span class="rainbow-text">Arco-íris</span>
+                </span>
             </a>
 
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#servicos" class="hover:text-white transition-colors">Especialidades</a>
-                <a href="#portfolio" class="hover:text-white transition-colors">Portfólio</a>
-                <a href="https://www.techscire.com/about-1" class="hover:text-white transition-colors">Sobre Nós</a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+                <a href="#servicos" class="hover:text-brand-600 transition-colors">Especialidades</a>
+                <a href="#portfolio" class="hover:text-brand-600 transition-colors">Portfólio</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors">Contactos</a>
             </nav>
 
             <div class="flex items-center gap-4">
                 <a href="tel:+351964213754"
-                    class="hidden md:flex items-center gap-2 text-sm font-medium text-white hover:text-indigo-400 transition-colors mr-2">
+                    class="hidden md:flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors mr-2">
                     <iconify-icon icon="solar:phone-calling-linear" width="18"></iconify-icon>
                     964 213 754
                 </a>
-                <a href="https://www.techscire.com"
-                    class="hidden sm:flex text-xs font-medium text-zinc-500 hover:text-white items-center gap-1.5 transition-colors">
-                    <iconify-icon icon="solar:arrow-left-linear" width="12"></iconify-icon>
-                    Voltar à Home
-                </a>
                 <a href="#contact"
-                    class="px-4 py-2 rounded-full bg-white text-zinc-950 text-xs font-medium hover:bg-zinc-200 transition-colors">
+                    class="px-5 py-2.5 rounded-full bg-slate-900 text-white text-xs font-medium hover:bg-slate-800 transition-colors shadow-md">
                     Pedir Orçamento
                 </a>
             </div>
@@ -87,189 +105,156 @@
 
     <main class="relative z-10 pt-32 pb-20">
 
-        <section class="max-w-7xl mx-auto px-6 mb-32 text-center">
+        <section class="max-w-7xl mx-auto px-6 mb-32 text-center mt-10">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-brand-50 text-brand-600 font-medium text-sm mb-6 rainbow-border">
+                Bem-vindo à Casas no Arco-íris
+            </div>
             <h1
-                class="text-5xl md:text-7xl font-medium text-white tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-zinc-500">
-                Remodelação Interior <br> & Obras Exteriores.
+                class="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight mb-6 leading-tight">
+                Remodelação de Excelência <br> & <span class="rainbow-text">Obras Exteriores</span>
             </h1>
-            <p class="text-lg text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Intervenções completas em cozinhas, casas de banho e redes técnicas com o selo de qualidade
-                Techscire.
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Intervenções completas em cozinhas, casas de banho e redes técnicas com dedicação ao detalhe e qualidade superior.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact"
-                    class="px-8 py-3.5 rounded-lg bg-white text-zinc-950 font-medium text-sm hover:bg-zinc-200 flex items-center justify-center gap-2">
+                    class="px-8 py-3.5 rounded-lg bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 shadow-lg flex items-center justify-center gap-2 transition-transform hover:-translate-y-0.5">
                     Solicitar Visita Técnica
                     <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
                 </a>
                 <a href="#servicos"
-                    class="px-8 py-3.5 rounded-lg border border-zinc-800 text-white font-medium text-sm hover:bg-zinc-900">
+                    class="px-8 py-3.5 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium text-sm hover:bg-slate-50 transition-colors shadow-sm">
                     Ver Especialidades
                 </a>
             </div>
         </section>
 
         <section id="servicos" class="max-w-7xl mx-auto px-6 mb-32">
-            <h2 class="text-3xl font-medium text-white mb-12">Nossas Especialidades</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">As Nossas Especialidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div
-                    class="p-6 rounded-xl bg-zinc-900/30 border border-white/5 hover:border-indigo-500/30 transition-all">
-                    <iconify-icon class="text-white mb-4" icon="solar:bath-linear" width="32"></iconify-icon>
-                    <h3 class="text-lg text-white font-medium mb-2">Cozinhas e WCs</h3>
-                    <p class="text-sm">Remodelação integral, canalização e novos acabamentos.</p>
+                    class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/40 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-brand-50 flex items-center justify-center mb-6">
+                        <iconify-icon class="text-brand-600" icon="solar:bath-linear" width="32"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl text-slate-900 font-bold mb-3">Cozinhas e WCs</h3>
+                    <p class="text-slate-600 leading-relaxed">Remodelação integral, canalização, design moderno e novos acabamentos personalizados.</p>
                 </div>
                 <div
-                    class="p-6 rounded-xl bg-zinc-900/30 border border-white/5 hover:border-indigo-500/30 transition-all">
-                    <iconify-icon class="text-white mb-4" icon="solar:bolt-linear" width="32"></iconify-icon>
-                    <h3 class="text-lg text-white font-medium mb-2">Eletricidade e ITED</h3>
-                    <p class="text-sm">Novas instalações, quadros elétricos e certificação técnica.</p>
+                    class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/40 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-brand-50 flex items-center justify-center mb-6">
+                        <iconify-icon class="text-brand-600" icon="solar:bolt-linear" width="32"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl text-slate-900 font-bold mb-3">Eletricidade e ITED</h3>
+                    <p class="text-slate-600 leading-relaxed">Novas instalações, atualização de quadros elétricos e certificação técnica rigorosa.</p>
                 </div>
                 <div
-                    class="p-6 rounded-xl bg-zinc-900/30 border border-white/5 hover:border-indigo-500/30 transition-all">
-                    <iconify-icon class="text-white mb-4" icon="solar:maximize-square-linear" width="32"></iconify-icon>
-                    <h3 class="text-lg text-white font-medium mb-2">Exterior e Janelas</h3>
-                    <p class="text-sm">Caixilharia de alumínio, reboco e muros de suporte.</p>
+                    class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/40 hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-brand-50 flex items-center justify-center mb-6">
+                        <iconify-icon class="text-brand-600" icon="solar:maximize-square-linear" width="32"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl text-slate-900 font-bold mb-3">Exterior e Janelas</h3>
+                    <p class="text-slate-600 leading-relaxed">Caixilharia de alumínio térmico, reboco, pintura exterior e construção de muros.</p>
                 </div>
             </div>
         </section>
 
         <section id="portfolio" class="max-w-7xl mx-auto px-6 mb-32">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-medium text-white mb-4">Portfólio de Obras</h2>
-                <p class="text-zinc-400 text-sm max-w-2xl mx-auto">Descubra os nossos trabalhos realizados em remodelações interiores e exteriores com dedicação aos detalhes.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Portfólio de Obras</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Descubra os nossos trabalhos realizados em remodelações interiores e exteriores com dedicação aos detalhes.</p>
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-1.jpeg" alt="Obra Realizada 1" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-2.jpeg" alt="Obra Realizada 2" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-3.jpeg" alt="Obra Realizada 3" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-4.jpeg" alt="Obra Realizada 4" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-5.jpeg" alt="Obra Realizada 5" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-6.jpeg" alt="Obra Realizada 6" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-7.jpeg" alt="Obra Realizada 7" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-8.jpeg" alt="Obra Realizada 8" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-9.jpeg" alt="Obra Realizada 9" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-10.jpeg" alt="Obra Realizada 10" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-11.jpeg" alt="Obra Realizada 11" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-12.jpeg" alt="Obra Realizada 12" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-13.jpeg" alt="Obra Realizada 13" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-14.jpeg" alt="Obra Realizada 14" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-15.jpeg" alt="Obra Realizada 15" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-16.jpeg" alt="Obra Realizada 16" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-17.jpeg" alt="Obra Realizada 17" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-18.jpeg" alt="Obra Realizada 18" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-19.jpeg" alt="Obra Realizada 19" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
-                <div class="group relative aspect-square overflow-hidden rounded-xl bg-zinc-900/50">
-                    <img src="./images/portfolio/portfolio-20.jpeg" alt="Obra Realizada 20" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" loading="lazy">
-                </div>
+                <script>
+                    const portfolioCount = 20;
+                    for(let i=1; i<=portfolioCount; i++) {
+                        document.write(`
+                            <div class="group relative aspect-square overflow-hidden rounded-xl bg-slate-200 shadow-md">
+                                <img src="./images/portfolio/portfolio-${i}.jpeg" alt="Obra Realizada ${i}" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.src='https://via.placeholder.com/400?text=Obra+${i}'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <span class="text-white font-medium">Projeto ${i}</span>
+                                </div>
+                            </div>
+                        `);
+                    }
+                </script>
             </div>
         </section>
 
         <section id="contact" class="max-w-3xl mx-auto px-6 mb-32">
-            <div class="rounded-2xl bg-zinc-900/50 border border-white/10 p-8 md:p-12">
+            <div class="rounded-3xl bg-white shadow-2xl shadow-slate-200/50 border border-slate-100 p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500"></div>
+                
                 <div class="text-center mb-10">
-                    <h2 class="text-2xl md:text-3xl font-medium text-white mb-3">Orçamentos e Consultoria</h2>
-                    <p class="text-zinc-400 text-sm">Responda aos campos abaixo para receber um contacto da nossa
-                        equipa
-                        de engenharia.</p>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Orçamentos e Consultoria</h2>
+                    <p class="text-slate-500">Preencha o formulário abaixo para receber o contacto da nossa equipa de orçamentação.</p>
                 </div>
 
-                <form action="https://formsubmit.co/geral@techscire.pt" method="POST" class="space-y-4">
-                    <input type="hidden" name="_subject" value="Novo Pedido de Orçamento - Landing Page">
+                <form action="https://formsubmit.co/geral@techscire.pt" method="POST" class="space-y-5">
+                    <input type="hidden" name="_subject" value="Novo Pedido de Orçamento - Casas no Arco-íris">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://jrivers-pt.github.io/Techscire-Obras-/">
+                    <input type="hidden" name="_next" value="https://jrivers-pt.github.io/Casas-no-Arco-iris/">
                     <input type="hidden" name="_template" value="table">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" name="Nome" placeholder="Seu Nome" required
-                            class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-indigo-500 outline-none">
-                        <input type="email" name="Email" placeholder="seu@email.com" required
-                            class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-indigo-500 outline-none">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="space-y-1">
+                            <label class="text-sm font-medium text-slate-700">Nome</label>
+                            <input type="text" name="Nome" placeholder="Seu Nome" required
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-slate-900 focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-medium text-slate-700">Email</label>
+                            <input type="email" name="Email" placeholder="seu@email.com" required
+                                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-slate-900 focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all">
+                        </div>
                     </div>
-                    <select name="Servico"
-                        class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-indigo-500 outline-none">
-                        <option value="remodelacao">Remodelação Interior</option>
-                        <option value="tecnico">Instalações Técnicas (Luz/Água)</option>
-                        <option value="exterior">Obras Exteriores</option>
-                    </select>
-                    <textarea name="Mensagem" rows="4" placeholder="Descreva brevemente a sua obra..."
-                        class="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:border-indigo-500 outline-none resize-none"></textarea>
+                    
+                    <div class="space-y-1">
+                        <label class="text-sm font-medium text-slate-700">Tipo de Serviço</label>
+                        <select name="Servico"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-slate-900 focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all appearance-none cursor-pointer">
+                            <option value="remodelacao">Remodelação Interior</option>
+                            <option value="tecnico">Instalações Técnicas (Luz/Água)</option>
+                            <option value="exterior">Obras Exteriores</option>
+                        </select>
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <label class="text-sm font-medium text-slate-700">Mensagem</label>
+                        <textarea name="Mensagem" rows="4" placeholder="Descreva brevemente a sua obra..."
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-slate-900 focus:bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none resize-none transition-all"></textarea>
+                    </div>
+                    
                     <button type="submit"
-                        class="w-full bg-white text-zinc-950 font-medium py-3.5 rounded-lg hover:bg-zinc-200 transition-colors">Enviar
-                        Pedido de Orçamento</button>
+                        class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl mt-2">
+                        Enviar Pedido de Orçamento
+                    </button>
                 </form>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-zinc-950 border-t border-white/10 pt-16 pb-8 text-center">
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 text-center">
         <div class="max-w-7xl mx-auto px-6">
             <!-- Main Navigation -->
-            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8 text-sm font-medium text-white">
-                <a href="https://www.techscire.com" class="hover:text-indigo-400 transition-colors">Início</a>
-                <a href="https://www.techscire.com/#produtos"
-                    class="hover:text-indigo-400 transition-colors">Produtos</a>
-                <a href="https://www.techscire.com/assistencia"
-                    class="hover:text-indigo-400 transition-colors">Assistência Técnica</a>
-                <a href="https://www.techscire.com/about-1" class="hover:text-indigo-400 transition-colors">A
-                    Techscire</a>
+            <nav class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8 text-sm font-bold text-slate-800">
+                <a href="#" class="hover:text-brand-600 transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-brand-600 transition-colors">Serviços</a>
+                <a href="#portfolio" class="hover:text-brand-600 transition-colors">Obras Realizadas</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors">Contactos</a>
                 <a href="https://www.livroreclamacoes.pt" target="_blank"
-                    class="hover:text-indigo-400 transition-colors">Livro De Reclamações Eléctronico</a>
+                    class="hover:text-brand-600 transition-colors">Livro De Reclamações Eletrónico</a>
             </nav>
 
             <!-- Copyright -->
-            <div class="text-zinc-500 text-xs space-y-4">
-                <p>Direitos autorais © 2026 Todos os direitos reservados - Techscire</p>
-
-                <!-- Secondary Links -->
-                <div class="flex justify-center gap-4 text-zinc-600">
-                    <a href="https://www.techscire.com/termos" class="hover:text-white transition-colors">Termos
-                        e
-                        Condições</a>
-                    <span>|</span>
-                    <a href="https://www.techscire.com/privacidade"
-                        class="hover:text-white transition-colors">Privacidade</a>
-                    <span>|</span>
-                    <a href="https://www.techscire.com/acessibilidade"
-                        class="hover:text-white transition-colors">Acessibilidade</a>
+            <div class="text-slate-500 text-sm space-y-4">
+                <p>Direitos autorais © 2026 Todos os direitos reservados - Casas no Arco-íris</p>
+                <div class="flex justify-center items-center gap-2 mt-4 text-xs">
+                    <span>Contacto: 964 213 754</span>
+                    <span class="text-slate-300">|</span>
+                    <span>geral@techscire.pt</span>
                 </div>
             </div>
         </div>
@@ -277,6 +262,4 @@
 
 </body>
 
-</html>< ! - -   v 3   c a c h e   b u s t e r   - - > 
-     
-     
+</html>
