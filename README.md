@@ -8,7 +8,7 @@ Esta página foi criada para funcionar de forma independente e profissional, gar
 
 **Funcionalidades Principais:**
 - **Design Moderno e Luminoso:** Utiliza Tailwind CSS com uma estética arquitetónica clara e elegante, complementada com subtis gradientes do arco-íris para combinar com a identidade da marca.
-- **Formulário Integrado:** Captação de leads e pedidos de orçamentos diretamente pelo site usando FormSubmit (direcionado para o email `geral@techscire.pt`).
+- **Formulário Integrado:** Captação de leads e pedidos de orçamentos diretamente pelo site usando FormSubmit (direcionado para o email `casasnoarcoiris@gmail.com`).
 - **SEO Otimizado:** Inclui meta tags essenciais para melhorar a visibilidade nos motores de busca locais.
 - **Responsividade Total:** Adapta-se perfeitamente a telemóveis, tablets e computadores de secretária.
 
@@ -16,7 +16,7 @@ Esta página foi criada para funcionar de forma independente e profissional, gar
 
 Este projeto está configurado para ser hospedado via **GitHub Pages** (ou com domínio próprio associado). 
 
-🔗 **Link Oficial Temporário:** [https://jrivers-pt.github.io/Casas-no-Arco-iris/](https://jrivers-pt.github.io/Casas-no-Arco-iris/)
+🔗 **Link Oficial Temporário:** [https://jrivers-pt.github.io/Casas-no-arco-iris/](https://jrivers-pt.github.io/Casas-no-arco-iris/)
 
 ## 🛠️ Como Atualizar
 
