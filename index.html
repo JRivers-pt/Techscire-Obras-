@@ -131,49 +131,48 @@
                 </div>
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/50 hidden md:block aspect-[4/3] group" id="hero-carousel">
                     
-                    <!-- Slide 1 -->
-                    <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 carousel-slide">
-                        <img src="./images/portfolio/WhatsApp Image 2026-08-14 at 16.54.50 (1).jpeg" alt="Remodelação de Excelência" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-6 left-6 right-6 text-center">
-                            <span class="bg-white/90 backdrop-blur-md text-slate-900 text-sm font-bold px-4 py-2 rounded-lg tracking-wider shadow-lg border border-slate-200">
-                                REMODELAÇÃO DE EXCELÊNCIA
-                            </span>
-                        </div>
-                    </div>
+                    <script>
+                        const portfolioImages = [
+                            "WhatsApp Image 2026-08-14 at 16.54.50 (1).jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.54.50.jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.54.52.jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.54.55.jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.55.01.jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.55.02 (2).jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.55.03 (1).jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.55.03.jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.56.50 (3).jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.56.50.jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.56.51 (1).jpeg",
+                            "WhatsApp Image 2026-08-14 at 16.56.51.jpeg",
+                            "portfolio-1.jpeg",
+                            "portfolio-15.jpeg",
+                            "portfolio-17.jpeg",
+                            "portfolio-2.jpeg",
+                            "portfolio-3.jpeg",
+                            "portfolio-5.jpeg",
+                            "portfolio-6.jpeg",
+                            "portfolio-9.jpeg"
+                        ];
 
-                    <!-- Slide 2 -->
-                    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 carousel-slide">
-                        <img src="./images/portfolio/WhatsApp Image 2026-08-14 at 16.54.50.jpeg" alt="Obras Gerais" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-6 left-6 right-6 text-center">
-                            <span class="bg-white/90 backdrop-blur-md text-slate-900 text-sm font-bold px-4 py-2 rounded-lg tracking-wider shadow-lg border border-slate-200">
-                                OBRAS GERAIS
-                            </span>
-                        </div>
-                    </div>
+                        const badges = ['REMODELAÇÃO DE EXCELÊNCIA', 'OBRAS GERAIS', 'ACABAMENTOS PREMIUM', 'PROJETOS CHAVE NA MÃO'];
 
-                    <!-- Slide 3 -->
-                    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 carousel-slide">
-                        <img src="./images/portfolio/WhatsApp Image 2026-08-14 at 16.54.52.jpeg" alt="Acabamentos Premium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-6 left-6 right-6 text-center">
-                            <span class="bg-white/90 backdrop-blur-md text-slate-900 text-sm font-bold px-4 py-2 rounded-lg tracking-wider shadow-lg border border-slate-200">
-                                ACABAMENTOS PREMIUM
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 carousel-slide">
-                        <img src="./images/portfolio/WhatsApp Image 2026-08-14 at 16.54.55.jpeg" alt="Projetos Chave na Mão" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-6 left-6 right-6 text-center">
-                            <span class="bg-white/90 backdrop-blur-md text-slate-900 text-sm font-bold px-4 py-2 rounded-lg tracking-wider shadow-lg border border-slate-200">
-                                PROJETOS CHAVE NA MÃO
-                            </span>
-                        </div>
-                    </div>
+                        portfolioImages.forEach((filename, index) => {
+                            const opacityClass = index === 0 ? 'opacity-100' : 'opacity-0';
+                            const badge = badges[index % badges.length];
+                            document.write(`
+                                <div class="absolute inset-0 transition-opacity duration-1000 ${opacityClass} carousel-slide">
+                                    <img src="./images/portfolio/${filename}" alt="${badge}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                                    <div class="absolute bottom-6 left-6 right-6 text-center">
+                                        <span class="bg-white/90 backdrop-blur-md text-slate-900 text-sm font-bold px-4 py-2 rounded-lg tracking-wider shadow-lg border border-slate-200">
+                                            ${badge}
+                                        </span>
+                                    </div>
+                                </div>
+                            `);
+                        });
+                    </script>
 
                     <script>
                         document.addEventListener("DOMContentLoaded", function() {
@@ -230,28 +229,7 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <script>
-                    const portfolioImages = [
-                        "WhatsApp Image 2026-08-14 at 16.54.50 (1).jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.54.50.jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.54.52.jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.54.55.jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.55.01.jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.55.02 (2).jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.55.03 (1).jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.55.03.jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.56.50 (3).jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.56.50.jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.56.51 (1).jpeg",
-                        "WhatsApp Image 2026-08-14 at 16.56.51.jpeg",
-                        "portfolio-1.jpeg",
-                        "portfolio-15.jpeg",
-                        "portfolio-17.jpeg",
-                        "portfolio-2.jpeg",
-                        "portfolio-3.jpeg",
-                        "portfolio-5.jpeg",
-                        "portfolio-6.jpeg",
-                        "portfolio-9.jpeg"
-                    ];
+
                     
                     portfolioImages.forEach((filename, index) => {
                         const projectNum = index + 1;
