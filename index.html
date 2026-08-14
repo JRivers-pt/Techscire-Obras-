@@ -131,15 +131,66 @@
                         </a>
                     </div>
                 </div>
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/50 hidden md:block group">
-                    <img src="./images/hero_before_after.jpg" alt="Antes e depois de remodelação" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
-                    <div class="absolute bottom-4 left-6 bg-slate-900/80 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-lg tracking-wider border border-white/20 shadow-lg">
-                        ANTES
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/50 hidden md:block aspect-[4/3] group" id="hero-carousel">
+                    
+                    <!-- Slide 1: Before and After -->
+                    <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 carousel-slide">
+                        <img src="./images/hero_before_after.jpg" alt="Antes e depois de remodelação" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-6 bg-slate-900/80 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-lg tracking-wider border border-white/20 shadow-lg">
+                            ANTES
+                        </div>
+                        <div class="absolute bottom-4 right-6 bg-brand-600/90 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-lg tracking-wider border border-brand-400/30 shadow-lg">
+                            DEPOIS
+                        </div>
                     </div>
-                    <div class="absolute bottom-4 right-6 bg-brand-600/90 backdrop-blur-md text-white text-xs font-bold px-4 py-2 rounded-lg tracking-wider border border-brand-400/30 shadow-lg">
-                        DEPOIS
+
+                    <!-- Slide 2: Team Working -->
+                    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 carousel-slide">
+                        <img src="./images/hero_team.jpg" alt="Equipa de profissionais em obra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-center">
+                            <span class="bg-white/90 backdrop-blur-md text-slate-900 text-sm font-bold px-4 py-2 rounded-lg tracking-wider shadow-lg border border-slate-200">
+                                EQUIPA PROFISSIONAL
+                            </span>
+                        </div>
                     </div>
+
+                    <!-- Slide 3: Exterior -->
+                    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 carousel-slide">
+                        <img src="./images/hero_exterior.jpg" alt="Remodelação exterior de moradia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-center">
+                            <span class="bg-white/90 backdrop-blur-md text-slate-900 text-sm font-bold px-4 py-2 rounded-lg tracking-wider shadow-lg border border-slate-200">
+                                OBRAS EXTERIORES
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Craftsmanship -->
+                    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 carousel-slide">
+                        <img src="./images/hero_craftsmanship.jpg" alt="Mestre a aplicar azulejos de mármore" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10000ms]">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-center">
+                            <span class="bg-white/90 backdrop-blur-md text-slate-900 text-sm font-bold px-4 py-2 rounded-lg tracking-wider shadow-lg border border-slate-200">
+                                ACABAMENTOS PREMIUM
+                            </span>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const slides = document.querySelectorAll('.carousel-slide');
+                            if (slides.length > 0) {
+                                let currentSlide = 0;
+                                setInterval(() => {
+                                    slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
+                                    currentSlide = (currentSlide + 1) % slides.length;
+                                    slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+                                }, 5000);
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </section>
