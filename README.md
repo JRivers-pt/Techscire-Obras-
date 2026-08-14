@@ -1,28 +1,29 @@
-# Techscire Remodelações - Landing Page
+# Casas no Arco-íris - Landing Page
 
-Esta é uma landing page dedicada para o serviço de remodelações da **Techscire**, desenhada para ser rápida, leve e focada em conversão.
+Esta é a landing page oficial para o serviço de remodelações e obras exteriores da **Casas no Arco-íris**, desenhada para ser rápida, apelativa e focada na conversão de clientes.
 
 ## 🚀 Sobre o Projeto
 
-Esta página foi criada para funcionar de forma independente do site principal (Site123), garantindo performance máxima e indexação otimizada no Google (SEO). Ela serve como um ponto de contacto direto para pedidos de orçamento de remodelações.
+Esta página foi criada para funcionar de forma independente e profissional, garantindo performance máxima e indexação otimizada no Google (SEO). Serve como o ponto central para apresentação de portfólio e pedidos de orçamento de remodelações.
 
 **Funcionalidades Principais:**
-- **Design Premium & Moderno:** Utiliza Tailwind CSS com uma estética escura ("dark mode") profissional.
-- **Formulário Funcional:** Envia os dados do cliente diretamente para o email `info@techscire.com` (abre o cliente de email do utilizador).
-- **SEO Otimizado:** Inclui meta tags essenciais para melhorar a visibilidade nos motores de busca.
-- **Responsivo:** Adapta-se perfeitamente a telemóveis, tablets e computadores.
+- **Design Moderno e Luminoso:** Utiliza Tailwind CSS com uma estética arquitetónica clara e elegante, complementada com subtis gradientes do arco-íris para combinar com a identidade da marca.
+- **Formulário Integrado:** Captação de leads e pedidos de orçamentos diretamente pelo site usando FormSubmit (direcionado para o email `geral@techscire.pt`).
+- **SEO Otimizado:** Inclui meta tags essenciais para melhorar a visibilidade nos motores de busca locais.
+- **Responsividade Total:** Adapta-se perfeitamente a telemóveis, tablets e computadores de secretária.
 
 ## 🌐 Como Funciona (Hospedagem)
 
-Este projeto está hospedado gratuitamente no **GitHub Pages**, aproveitando a infraestrutura global e rápida do GitHub.
+Este projeto está configurado para ser hospedado via **GitHub Pages** (ou com domínio próprio associado). 
 
-🔗 **Link Oficial:** [https://jrivers-pt.github.io/techscire-remodelacoes/](https://jrivers-pt.github.io/techscire-remodelacoes/)
+🔗 **Link Oficial Temporário:** [https://jrivers-pt.github.io/Casas-no-Arco-iris/](https://jrivers-pt.github.io/Casas-no-Arco-iris/)
 
 ## 🛠️ Como Atualizar
 
-1. Faça as alterações no ficheiro `index.html`.
-2. Faça "commit" e "push" para a branch `main` deste repositório.
-3. As alterações serão publicadas automaticamente em poucos minutos.
+1. Faça as alterações diretamente no ficheiro `index.html`.
+2. As imagens de portfólio devem ser adicionadas à pasta `images/portfolio/`.
+3. Faça "commit" e "push" para a branch `main` do repositório no GitHub.
+4. As alterações ficarão online e disponíveis na página principal automaticamente em poucos minutos.
 
 ---
-© 2026 Techscire Solutions.
+© 2026 Casas no Arco-íris. Todos os direitos reservados.
